@@ -11,6 +11,7 @@
             
         //Utilizadas para almacenar el resultado y el últimoresultado (para usarlo directamente en operaciones futuras).
         var result = '';
+        var ans = '';
 
         //Necesaria para cambiar de un operador a otro.
         var oper_state = 0;
@@ -60,23 +61,36 @@
 
             //Algo que chequee si metiste un menos, y asignar simbolo negativo.
 
+            if ((oper_state === 0) || (oper_state === 1)){
 
-            if ((operando_1 === '') && (tipo_oper === '-')){
+                if ((operando_1 === '') && (tipo_oper === '-')){
 
-                operando_1 = '-';
+                    operando_1 = '-';
 
-                oper_1_display = operando_1;
+                    oper_1_display = operando_1;
 
+                    document.getElementById('calculadora_screen_oper').innerHTML = oper_1_display;
+
+                }   
+                else if  ((operando_1 !== '') && (operando_1 !== '-')){
+
+                        oper_state = 1;
+
+                    cambiar_operador (tipo_oper);
+
+                }    
+            }
+            if (oper_state === 2){
+                
+                operar ();
+                operando_1 = result;
+                oper_1_display = '(' + oper_1_display + simbol + oper_2_display + ')';
                 document.getElementById('calculadora_screen_oper').innerHTML = oper_1_display;
-
-            }   
-            else if  ((operando_1 !== '') && (operando_1 !== '-')){
-
-                    oper_state = 1;
-
+                oper_state = 1;
+                operando_2 = '';   
+                oper_2_display = '';
                 cambiar_operador (tipo_oper);
-
-            }           
+            }  
 
         }
   
@@ -195,6 +209,8 @@
             document.getElementById('calculadora_screen_res').innerHTML = ' ';
             document.getElementById('calculadora_screen_res').innerHTML = result;
 
+            //Almacenar último resultado
+            ans = result;
             //Reiniciar los operandos
             operando_1 = '';
             operando_2 = '';
@@ -212,7 +228,7 @@
 
             if (oper_state === 0){
                 
-                operando_1 += result;
+                operando_1 += ans;
 
                 oper_1_display = operando_1;
 
@@ -221,7 +237,7 @@
             }
             if (oper_state === 1){
                 
-                operando_2 += result;
+                operando_2 += ans;
 
                 oper_2_display = operando_2;
 
