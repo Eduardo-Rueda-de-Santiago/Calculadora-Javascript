@@ -1,0 +1,54 @@
+
+
+
+
+	
+	/*Fuentes*/
+	@font-face{
+
+		font-family: "Sacramento";
+		src: url("Sacramento-Regular.ttf");
+
+	}
+	@font-face{
+		
+		font-family: "Dancing";
+		src: url("DancingScript-VariableFont_wght.ttf");
+
+	}
+	@font-face{
+		
+		font-family: "FuzzyBold";
+		src: url("FuzzyBubbles-Bold.ttf");
+
+	}
+	@font-face{
+		
+		font-family: "FuzzyRegular";
+		src: url("FuzzyBubbles-Regular.ttf");
+
+	}
+	@font-face{
+		
+		font-family: "KashuanRegular";
+		src: url("KaushanScript-Regular.ttf");
+
+	}
+	@font-face{
+		
+		font-family: "Merienda-Bold";
+		src: url("Merienda-Bold.ttf");
+
+	}
+	@font-face{
+		
+		font-family: "Merienda-Regular";
+		src: url("Merienda-Regular.ttf");
+
+	}
+	@font-face{
+		
+		font-family: "SofadiOne";
+		src: url("SofadiOne-Regular.ttf");
+
+	}

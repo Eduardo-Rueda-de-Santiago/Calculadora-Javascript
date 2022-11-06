@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+
+<html>
+
+	<!--Todo lo que va en el "head" no se ve en la página web.-->
+	<head>
+
+		<meta charset="UTF-8"/>
+		
+		<link href="css/main_style_css.css" rel="stylesheet" type="text/css">	
+		<link href="css/fonts/fonts_css.css" rel="stylesheet" type="text/css">
+	
+		<script type = "text/javascript" src="javascript/main_JS.js"></script>	
+		
+		<title>Calculadora Básica</title>
+
+
+	</head>
+
+	<body>
+	
+		<header>
+
+			<p>Calculadora Básica</p>
+
+		</header>
+
+		<main>
+
+			<div id = "calculadora_frame">
+
+				<div id = "calculadora_display">
+					<p id = "calculadora_screen_oper"></p>
+					<p id = "calculadora_screen_res"></p>
+				</div>
+
+				<div class = "calculadora_line">
+
+					<div class = "calculadora_button" onclick="get_new_number ('9');"><p>9</p></div>
+					<div class = "calculadora_button" onclick="get_new_number ('8');"><p>8</p></div>
+					<div class = "calculadora_button" onclick="get_new_number ('7');"><p>7</p></div>
+					<div class = "calculadora_button" onclick="check_oper ('+');"><p>+</p></div>
+
+				</div>
+
+				<div class = "calculadora_line">
+
+					<div class = "calculadora_button" onclick="get_new_number ('6');"><p>6</p></div>
+					<div class = "calculadora_button" onclick="get_new_number ('5');"><p>5</p></div>
+					<div class = "calculadora_button" onclick="get_new_number ('4');"><p>4</p></div>
+					<div class = "calculadora_button" onclick="check_oper ('-');"><p>-</p></div>
+
+				</div>	
+
+				<div class = "calculadora_line">
+
+					<div class = "calculadora_button" onclick="get_new_number ('3');"><p>3</p></div>
+					<div class = "calculadora_button" onclick="get_new_number ('2');"><p>2</p></div>
+					<div class = "calculadora_button" onclick="get_new_number ('1');"><p>1</p></div>
+					<div class = "calculadora_button" onclick="check_oper ('*');"><p>X</p></div>
+
+				</div>	
+
+				<div class = "calculadora_line">
+
+					<div class = "calculadora_button" onclick="get_new_number ('.');"><p>.</p></div>
+					<div class = "calculadora_button" onclick="get_new_number (0);"><p>0</p></div>
+					<div class = "calculadora_button" onclick="print_res ();"><p>=</p></div>
+					<div class = "calculadora_button" onclick="check_oper ('/');"><p>/</p></div>
+
+				</div>				
+
+			</div>
+
+			<div id = "clear_buttom" onclick="all_clear ();">
+
+				<p id = "clear_buttom_text">Clear</p>
+
+			</div>
+
+		</main>
+
+
+		<footer>
+		
+			<p>Eduardo Rueda</p>
+
+		</footer>
+
+	</body>
+
+
+</html>
