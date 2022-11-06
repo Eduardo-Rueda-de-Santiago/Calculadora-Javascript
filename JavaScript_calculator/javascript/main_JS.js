@@ -70,7 +70,7 @@
                 document.getElementById('calculadora_screen_oper').innerHTML = oper_1_display;
 
             }   
-            else if  (operando_1 !== ''){
+            else if  ((operando_1 !== '') && (operando_1 !== '-')){
 
                     oper_state = 1;
 
@@ -212,7 +212,7 @@
 
             if (oper_state === 0){
                 
-                operando_1 = result;
+                operando_1 += result;
 
                 oper_1_display = operando_1;
 
@@ -221,7 +221,7 @@
             }
             if (oper_state === 1){
                 
-                operando_2 = result;
+                operando_2 += result;
 
                 oper_2_display = operando_2;
 
