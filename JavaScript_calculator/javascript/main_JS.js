@@ -72,6 +72,15 @@
                     document.getElementById('calculadora_screen_oper').innerHTML = oper_1_display;
 
                 }   
+                else if ((operando_1 === '-') && (tipo_oper === '+')){
+
+                    operando_1 = '+';
+
+                    oper_1_display = operando_1;
+
+                    document.getElementById('calculadora_screen_oper').innerHTML = oper_1_display;
+
+                } 
                 else if  ((operando_1 !== '') && (operando_1 !== '-')){
 
                         oper_state = 1;
@@ -96,6 +105,11 @@
   
         function print_res (){
             
+            if ( (oper_state === 0) && (operando_1 === '-')){
+               
+                oper_state = 0;
+
+            } 
             //Que hacer si no hay operando_2
             if ( (oper_state === 0) || (oper_state === 1)){
                 
